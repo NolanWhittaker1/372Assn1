@@ -1,5 +1,9 @@
 <main>
   <body>
+    <button class="btn btn-danger" id="closeButton" (click)="onBack()">
+      x
+    </button>
+    <h1>Add a Recipe!</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
       <input
         type="text"
@@ -19,6 +23,7 @@
         name="ingredients"
         placeholder="Recipe Ingredients"
         formControlName="ingredients"
+        rows="5"
       />
 
       <input

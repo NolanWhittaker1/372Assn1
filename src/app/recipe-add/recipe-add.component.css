@@ -1,0 +1,42 @@
+body {
+  text-align: center;
+  background-color: white;
+  color:black;
+  height: fit-content;
+  padding: 5vw;
+  border-radius: 10px;
+  position: relative;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 30vw;
+    margin-bottom: 5px;
+}
+
+main {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+}
+
+#closeButton {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 3px;
+}
+
+
+
+
+

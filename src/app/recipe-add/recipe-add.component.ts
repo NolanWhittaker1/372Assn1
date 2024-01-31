@@ -40,6 +40,9 @@ export class RecipeAddComponent {
       this.router.navigate([`/main`]);
     }
 
+    onBack() {
+      this.router.navigate([`/main`]);
+    }
   
 
 }

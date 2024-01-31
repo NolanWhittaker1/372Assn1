@@ -16,6 +16,8 @@ export class RecipeDisplayComponent {
     this.recipes = storedRecipes ? JSON.parse(storedRecipes) : [];
     this.recipeId = this.ActivatedRouter.snapshot.params['id'];
     this.currentRecipe = this.recipes.find(recipe => recipe.id === this.recipeId)|| new recipe("Unknown","Unknown","Unknown","Unknown");
+    console.log("RECIPE:")
+    console.log(this.currentRecipe);
    }
 
   
