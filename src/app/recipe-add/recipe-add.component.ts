@@ -21,13 +21,13 @@ export class RecipeAddComponent {
     }
     this.form = new FormGroup(formControls);
 
-    const storedReports = localStorage.getItem("recipes");
+    const storedRecipes = localStorage.getItem("recipes");
 
-    if (storedReports == null) {
+    if (storedRecipes == null) {
       this.recipes = [];
-      localStorage.setItem("reports", JSON.stringify(this.recipes));
+      localStorage.setItem("recipes", JSON.stringify(this.recipes));
     } else {
-      this.recipes = JSON.parse(storedReports as string);
+      this.recipes = JSON.parse(storedRecipes as string);
     }
    }
 
@@ -36,7 +36,7 @@ export class RecipeAddComponent {
       this.recipes.push(newRecipe);
       console.log("Adding new recipe:");
       console.log(this.recipes)
-      localStorage.setItem("reports",JSON.stringify(this.recipes));
+      localStorage.setItem("recipes",JSON.stringify(this.recipes));
       this.router.navigate([`/main`]);
     }
 

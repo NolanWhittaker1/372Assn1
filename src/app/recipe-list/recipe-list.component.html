@@ -1,0 +1,11 @@
+<header>
+  <input placeholder="Search" [(ngModel)]="query" />
+  <h1 readonly="readonly">Recipes</h1>
+  <button class="btn btn-success" (click)="addRecipe()">Add recipe</button>
+</header>
+<body>
+  <section *ngFor="let r of recipes | search : query" (click)="onClick(r.id)">
+    <img src="{{ r.photo }}" alt="Photo unavailable" />
+    <h3>{{ r.name }}</h3>
+  </section>
+</body>
