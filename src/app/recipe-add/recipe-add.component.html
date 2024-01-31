@@ -1,0 +1,36 @@
+<main>
+  <body>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+      <input
+        type="text"
+        name="name"
+        placeholder="Recipe name"
+        formControlName="name"
+      />
+      <input
+        type="textarea"
+        name="directions"
+        placeholder="Recipe Directions"
+        formControlName="directions"
+      />
+
+      <input
+        type="textarea"
+        name="ingredients"
+        placeholder="Recipe Ingredients"
+        formControlName="ingredients"
+      />
+
+      <input
+        type="text"
+        name="photo"
+        placeholder="Recipe Photo (Optional)"
+        formControlName="photo"
+      />
+
+      <button class="btn btn-outline-primary" [disabled]="!form.valid">
+        SAVE
+      </button>
+    </form>
+  </body>
+</main>
