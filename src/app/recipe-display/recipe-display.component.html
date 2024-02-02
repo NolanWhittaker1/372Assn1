@@ -2,7 +2,11 @@
   <body>
     <h3>{{ currentRecipe.name }}</h3>
     <img src="{{ currentRecipe.photo }}" alt="" />
-    <h3>{{ currentRecipe.directions }}</h3>
-    <h3>{{ currentRecipe.ingredients }}</h3>
+    <textarea>{{ currentRecipe.directions }}</textarea>
+    <textarea>{{ currentRecipe.ingredients }}</textarea>
+    <span
+      ><button (click)="onDelete()" class="btn btn-danger">Delete</button
+      ><button (click)="onBack()" class="btn btn-primary">Back</button></span
+    >
   </body>
 </main>

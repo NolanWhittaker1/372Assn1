@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { recipe } from '../recipe';
 
 @Component({
@@ -11,7 +11,7 @@ export class RecipeDisplayComponent {
   recipeId:string;
   currentRecipe:recipe;
   recipes:recipe[];
-  constructor(private ActivatedRouter:ActivatedRoute) {
+  constructor(private ActivatedRouter:ActivatedRoute, private router:Router) {
     const storedRecipes = localStorage.getItem("recipes");
     this.recipes = storedRecipes ? JSON.parse(storedRecipes) : [];
     this.recipeId = this.ActivatedRouter.snapshot.params['id'];
@@ -20,6 +20,15 @@ export class RecipeDisplayComponent {
     console.log(this.currentRecipe);
    }
 
-  
+   
+   onBack() {
+    this.router.navigate([`/main`]);
+  }
+
+    onDelete() {
+      this.recipes = this.recipes.filter(recipe => recipe.id !== this.recipeId);
+      localStorage.setItem("recipes", JSON.stringify(this.recipes));
+      this.router.navigate([`/main`]);
+    }
 
 }

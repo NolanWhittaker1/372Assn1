@@ -8,6 +8,7 @@ main {
 }
 
 body {
+    width: 30vw;
     background-color: white;
     color:black;
     height: fit-content;
@@ -19,8 +20,17 @@ body {
   }
 
   img {
-    width: 10vw;
+    max-width: 100%; 
     height: auto;
-    max-height: 25vh;
     border-radius: 5px;
+    max-height: 90%; 
+    margin-bottom: 5px;
 }
+textarea {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    max-height: 90%; 
+
+}
+
